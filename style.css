@@ -118,6 +118,7 @@ body {
 }
 #menu .entrar i{
     margin-right: .6vw;
+    scale: 1.2;
 }
 #menu .entrar:hover{
     scale: 1.1;
@@ -221,6 +222,5 @@ body {
     }
 
     /* MENU FIM */
-
 
 }
