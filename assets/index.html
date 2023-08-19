@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- meta tags de sistema-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Este é o site oficial do colégio cerávolo">
+    <meta name="Keywords"
+        content="Plataforma Ceravolo, Colegio Ceravolo, plataforma pre vestibular, ajuda, conteudos, avisos">
+    <meta name="author" content="Matheus M. Prado,Gabriel Felipe F. de Souza">
+    <link rel="shortcut icon" href="assets/img/ceravolo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Plataforma Colégio Ceravolo</title>
+</head>
+
+<body>
+
+    <!-- Começo do cabeçalho -->
+    <header id="header">
+        <a id="logo" href="index.html">
+            <img src="assets/img/ceravolo.png" alt="ceravolo" /></a>
+        <nav id="nav">
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false">
+                <span id="hamburger"></span>
+            </button>
+            <ul id="menu" role="menu">
+                <li><a href="#" class="btn1 barrinha">Home</a></li>
+                <li><a href="#" class="btn2 barrinha">Cursos</a></li>
+                <li><a href="#" class="btn3"><div class="entrar"><i class="fa-solid fa-user "></i> <p>Entrar</p></div></a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Final do cabeçalho -->
+
+
+    <!-- Começo do corpo da plataforma -->
+    <main>
+
+        <!-- Carrousel começo -->
+        <div class="slider">
+            <div class="slides">
+                <!-- Botões radio -->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+
+                <!-- Imagens do slide -->
+                <!-- 1 -->
+                <div class="slide first">
+                    <img src="assets/img/corcel.jpg" alt="Imagem 1">
+                </div>
+                <!-- 2 -->
+                <div class="slide">
+                    <img src="assets/img/ceravolo.png" alt="Imagem 2">
+                </div>
+                <!-- 3 -->
+                <div class="slide">
+                    <img src="assets/img/user.png" alt="Imagem 3">
+                </div>
+                <div class="slide">
+                    <img src="assets/img/corcel.jpg" alt="Imagem 4">
+                </div>
+
+                <!-- Auto navegação -->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+            </div>
+
+
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+        </div>
+        <!-- Carrousel FIM -->
+
+    </main>
+    <!-- Final do corpo da plataforma -->
+
+
+    <script src="assets/script.js"></script>
+    <script src="https://kit.fontawesome.com/0a598ec006.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
