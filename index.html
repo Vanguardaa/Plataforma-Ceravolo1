@@ -13,6 +13,27 @@
     <link rel="shortcut icon" href="assets/img/ceravolo.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>Plataforma Colégio Ceravolo</title>
+    <style>
+        /* Estilize o menu que irá descer */
+        #menu5 {
+            display: none;
+            position: absolute;
+            background-color: #fa0b0b;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+    <script>
+        // Função para mostrar ou ocultar o menu
+        function toggleMenu() {
+            var menu5 = document.getElementById("menu5");
+            if (menu5.style.display === "none") {
+                menu5.style.display = "block";
+            } else {
+                menu5.style.display = "none";
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -28,8 +49,12 @@
             </button>
             <ul id="menu" role="menu">
                 <li><a href="#" class="btn1 barrinha">Home</a></li>
-                <li><a href="#" class="btn2 barrinha">Cursos</a></li>
-                <li><a href="#" class="btn3"><div class="entrar"><i class="fa-solid fa-user "></i> <p>Entrar</p></div></a></li>
+                <li><a href="#" onmouseover="toggleMenu();" onmouseout="toggleMenu();">Cursos</a></li>
+                <li><a href="#" class="btn3">
+                        <div class="entrar"><i class="fa-solid fa-user "></i>
+                            <p>Entrar</p>
+                        </div>
+                    </a></li>
             </ul>
         </nav>
     </header>
@@ -39,16 +64,16 @@
     <!-- Começo do corpo da plataforma -->
     <main>
 
-        <div id="teste"> 
-        <h3> <img width="1000px" src="assets/img/corcel.jpg" alt=""> </h3> 
+        <div id="teste">
+            <h3> <img width="1000px" src="assets/img/corcel.jpg" alt=""> </h3>
         </div>
         <br>
-        <div id="teste"> 
-        <h3> VIDEO </h3> 
+        <div id="teste">
+            <h3> VIDEO </h3>
         </div>
         <br>
-        <div id="teste"> 
-        <h3> SLA  </h3> 
+        <div id="teste">
+            <h3> SLA </h3>
         </div>
 
 
