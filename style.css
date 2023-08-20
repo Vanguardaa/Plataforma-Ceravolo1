@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lisu+Bosa:wght@300&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Oswald&family=Poppins:wght@100;200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap');
+/* FONTES POSSÍVELS
+font-family: 'Open Sans', sans-serif;
+font-family: 'Kanit', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Poppins', sans-serif; 
+font-family: 'Lisu Bosa', serif;  
+*/
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Open Sans', sans-serif;
-    overflow-x: hidden;
-}
-
+    
 :root {
+    --bg: #e4e4e4;
+    --bg2: #353535;
     --branco: #FFFFFF;
     --azul-claro: #84d9f8;
     --azul-escuro: #08b4f4;
@@ -21,6 +23,19 @@ body {
     --title: #151515;
     --text: #000;
     --text2: #252525;
+    --text3: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    overflow-x: hidden;
+    background-color: var(--bg);
 }
 
 
@@ -130,10 +145,12 @@ body {
 
 /* Carrousel começo */
 .slider{
-    margin: 0 auto;
+    margin: 10px auto;
     width: 800px;
     height: 400px;
     overflow: hidden;
+    border: 1px solid #454545;
+    border-radius: 10px;
 }
 .slides{
     width: 400%;
@@ -212,7 +229,39 @@ body {
 #radio4:checked ~ .navigation-auto .auto-btn4{
     background-color: #fff;
 }
-/* Carrousel fim */
+/* Carroussel fim */
+
+
+
+/* footer começo */
+footer{
+    display: flex;
+    background-color: var(--bg2);
+    padding: 30px;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+footer a{
+    text-decoration: none;
+    color: var(--text3);
+    cursor: pointer;
+}
+footer img{
+    width: 20vw;
+}
+footer h4{
+    color: var(--text3);
+    font-weight: 200;
+}
+footer .contato a i {
+    color: #fff;
+    text-decoration: none;
+    transform: scale(1.5);
+    justify-content: space-between;
+    padding: 10px;
+}
+/* footer fim */
 
 
 
