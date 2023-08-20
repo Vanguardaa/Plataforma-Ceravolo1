@@ -8,6 +8,7 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 :root {
@@ -40,33 +41,14 @@ body {
     transition: all .5s ease;
 }
 
-#teste {
+#teste{
     position: center;
     background-color: var(--azul-escuro2);
     color: #FFFFFF;
     display: block;
     padding: 5rem;
     font-weight: bold;
-    transition: all .5s
-}
-
-#teste img {
-    position: center;
-    border: solid 1px rgb(0, 0, 0);
-    max-width: 100%;
-    display: relative;
-    align-items: center;
-
-
-}
-
-#teste h3 {
-
-    align-items: center;
-    position: center;
-    display: flex;
-
-
+    transition: all .5s 
 }
 
 #header.sticky {
@@ -127,7 +109,7 @@ body {
     display: none;
 }
 
-#menu .entrar {
+#menu .entrar{
     display: flex;
     align-items: center;
     background-color: var(--contraste);
@@ -135,114 +117,195 @@ body {
     border-radius: 10px;
     transition: all .5s ease;
 }
-
-#menu .entrar i {
+#menu .entrar i{
     margin-right: .6vw;
     scale: 1.2;
+}
+#menu .entrar:hover{
+    scale: 1.1;
+}
+/* MENU FIM */
 
-    #menu .entrar:hover {
-        scale: 1.1;
+
+
+/* Carrousel começo */
+.slider{
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+}
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+.slides input{
+    display: none;
+}
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 2s ease;
+}
+.slide img{
+    width: 800px;
+}
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+.manual-btn:hover{
+    background-color: #fff;
+}
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+.navigation-auto div{
+    border: 2px solid #10a5ff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .1s ease;
+}
+.navigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 360px;
+    display: flex;
+    justify-content: center;
+}
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #fff;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #fff;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: #fff;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: #fff;
+}
+/* Carrousel fim */
+
+
+
+/* Responsividade */
+@media (max-width: 600px) {
+
+    /* MENU COMEÇO */
+    #header {
+        justify-content: space-between;
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        background: #f8f8f8;
+        background-color: rgba(0, 0, 0, 0.05);
+        transition: 0.6s;
+        z-index: 1000;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #menu li a.btn4 {
+        margin-top: 5vh;
+    }
+
+    #nav.active #menu {
+        margin-top: 0px;
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    #menu a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+    }
+
+    #btn-mobile {
+        display: flex;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: 0.5rem;
+    }
+
+    #hamburger {
+        border-top: 2px solid;
+        width: 20px;
+        color: #151515;
+    }
+
+    #hamburger::after,
+    #hamburger::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: 0.3s;
+        position: relative;
+    }
+
+    #nav.active #hamburger {
+        border-top-color: transparent;
+    }
+
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+
+    #nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    #menu {
+        background-image: linear-gradient(to bottom, #67d0f7, #67d0f7);
+    }
+
+    #logo img {
+        max-width: 15vw;
+        margin-top: 1px;
     }
 
     /* MENU FIM */
 
-
-
-
-
-
-
-    /* Responsividade */
-    @media (max-width: 600px) {
-
-        /* MENU COMEÇO */
-        #header {
-            justify-content: space-between;
-        }
-
-        #menu {
-            display: block;
-            position: absolute;
-            width: 100%;
-            top: 70px;
-            right: 0px;
-            background: #f8f8f8;
-            background-color: rgba(0, 0, 0, 0.05);
-            transition: 0.6s;
-            z-index: 1000;
-            height: 0px;
-            visibility: hidden;
-            overflow-y: hidden;
-        }
-
-        #menu li a.btn4 {
-            margin-top: 5vh;
-        }
-
-        #nav.active #menu {
-            margin-top: 0px;
-            height: calc(100vh - 70px);
-            visibility: visible;
-            overflow-y: auto;
-        }
-
-        #menu a {
-            padding: 1rem 0;
-            margin: 0 1rem;
-            border-bottom: 2px solid rgba(0, 0, 0, 0.05);
-        }
-
-        #btn-mobile {
-            display: flex;
-            padding: 0.5rem 1rem;
-            font-size: 1rem;
-            border: none;
-            background: none;
-            cursor: pointer;
-            gap: 0.5rem;
-        }
-
-        #hamburger {
-            border-top: 2px solid;
-            width: 20px;
-            color: #151515;
-        }
-
-        #hamburger::after,
-        #hamburger::before {
-            content: "";
-            display: block;
-            width: 20px;
-            height: 2px;
-            background: currentColor;
-            margin-top: 5px;
-            transition: 0.3s;
-            position: relative;
-        }
-
-        #nav.active #hamburger {
-            border-top-color: transparent;
-        }
-
-        #nav.active #hamburger::before {
-            transform: rotate(135deg);
-        }
-
-        #nav.active #hamburger::after {
-            transform: rotate(-135deg);
-            top: -7px;
-        }
-
-        #menu {
-            background-image: linear-gradient(to bottom, #67d0f7, #67d0f7);
-        }
-
-        #logo img {
-            max-width: 15vw;
-            margin-top: 1px;
-        }
-
-        /* MENU FIM */
-
-    }
 }

@@ -13,27 +13,6 @@
     <link rel="shortcut icon" href="assets/img/ceravolo.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>Plataforma Colégio Ceravolo</title>
-    <style>
-        /* Estilize o menu que irá descer */
-        #menu5 {
-            display: none;
-            position: absolute;
-            background-color: #fa0b0b;
-            padding: 10px;
-            border: 1px solid #ccc;
-        }
-    </style>
-    <script>
-        // Função para mostrar ou ocultar o menu
-        function toggleMenu() {
-            var menu5 = document.getElementById("menu5");
-            if (menu5.style.display === "none") {
-                menu5.style.display = "block";
-            } else {
-                menu5.style.display = "none";
-            }
-        }
-    </script>
 </head>
 
 <body>
@@ -49,12 +28,8 @@
             </button>
             <ul id="menu" role="menu">
                 <li><a href="#" class="btn1 barrinha">Home</a></li>
-                <li><a href="#" onmouseover="toggleMenu();" onmouseout="toggleMenu();">Cursos</a></li>
-                <li><a href="#" class="btn3">
-                        <div class="entrar"><i class="fa-solid fa-user "></i>
-                            <p>Entrar</p>
-                        </div>
-                    </a></li>
+                <li><a href="#" class="btn2 barrinha">Cursos</a></li>
+                <li><a href="#" class="btn3"><div class="entrar"><i class="fa-solid fa-user "></i> <p>Entrar</p></div></a></li>
             </ul>
         </nav>
     </header>
@@ -64,18 +39,50 @@
     <!-- Começo do corpo da plataforma -->
     <main>
 
-        <div id="teste">
-            <h3> <img width="1000px" src="assets/img/corcel.jpg" alt=""> </h3>
-        </div>
-        <br>
-        <div id="teste">
-            <h3> VIDEO </h3>
-        </div>
-        <br>
-        <div id="teste">
-            <h3> SLA </h3>
-        </div>
+        <!-- Carrousel começo -->
+        <div class="slider">
+            <div class="slides">
+                <!-- Botões radio -->
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
 
+                <!-- Imagens do slide -->
+                <!-- 1 -->
+                <div class="slide first">
+                    <img src="assets/img/corcel.jpg" alt="Imagem 1">
+                </div>
+                <!-- 2 -->
+                <div class="slide">
+                    <img src="assets/img/ceravolo.png" alt="Imagem 2">
+                </div>
+                <!-- 3 -->
+                <div class="slide">
+                    <img src="assets/img/user.png" alt="Imagem 3">
+                </div>
+                <div class="slide">
+                    <img src="assets/img/corcel.jpg" alt="Imagem 4">
+                </div>
+
+                <!-- Auto navegação -->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+            </div>
+
+
+            <div class="manual-navigation">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+        </div>
+        <!-- Carrousel FIM -->
 
     </main>
     <!-- Final do corpo da plataforma -->
