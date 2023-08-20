@@ -1,2 +1,3 @@
 Introdução;
 intérprete de libras;
+Carroussel -> De prioridade a imagens com resolução de 1920x1080;
